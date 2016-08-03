@@ -12,16 +12,16 @@ module.exports = function(options){
     var host = options.host;
     var context = options.context;
     var port = options.serverport;
-    var application=koa();
+    //var application=koa();
     return {
         start: function() {
             var router = new Router({
                 prefix: context
             });
-           application.use(serve(path.join(__dirname, '../src')));//（../src是因为该js文件处于次级目录要回到根目录定位src目录）
+           //application.use(serve(path.join(__dirname, '../src')));//（../src是因为该js文件处于次级目录要回到根目录定位src目录）
             console.log(path.join(__dirname, '../src'));
-            app.use(mount(context,application));//挂载koa application在指定的url上
-           // app.use(serve(path.join(__dirname, '../src')));
+            //app.use(mount(context,application));//挂载koa application在指定的url上
+            app.use(serve(path.join(__dirname, '../src')));
 /*            app.use(router.routes())
                 .use(router.allowedMethods());*/
             app.listen(port);

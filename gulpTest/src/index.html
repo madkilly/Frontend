@@ -6,21 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <!--/mytest为工程名部署名 使用绝对路径 避免静态文件找不到-->
-    <link href="/mytest/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/mytest/css/starter-template.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/starter-template.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                                                                  aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Bootstrap示例</a>
+            <a class="navbar-brand" href="/mytest">Bootstrap示例</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -44,16 +37,22 @@
 
 <div class="container">
 
-    <div class="starter-template">
-        <h1>Bootstrap starter</h1>
-
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a
-            mostly barebones HTML document.</p>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>表格示例</h2>
+            <p>该示例实现了bootstrap的表格，表格内容准备通过koa框架模拟后台数据进行展示</p>
+            <p><a class="btn btn-default" href="/example/theme/theme.html" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>窄屏幕示例</h2>
+            <p>jumbotron 小屏幕实现，带响应式，自动调整页面布局 </p>
+            <p><a class="btn btn-default" href="/example/jumbotron-narrow/jumbotron-narrow.html" role="button">View details &raquo;</a></p>
+        </div>
     </div>
 
 </div>
 <!-- /.container -->
-<script src="/mytest/vendor/jquery/dist/jquery.js"></script>
-<script src="/mytest/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/vendor/jquery/dist/jquery.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
