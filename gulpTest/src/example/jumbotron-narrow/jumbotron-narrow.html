@@ -20,9 +20,18 @@
     </div>
 
     <div class="jumbotron">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        <h1>遮罩层示例</h1>
+        <p class="lead">设置了一个遮罩层,和伴随遮罩层显示的对话框.注意事项:在mask.js中加入了遮罩层显示时,对body滚动条的限制,模仿模态对话框.其他属性配置请参见jumbotron-narrow.css和mask.js,html页面则由&ltdiv id="mask"&gt和&ltdiv id="show"&gt 提供功能.</p>
+        <p><a  class="btn btn-lg btn-success" href="javascript:void(0)" role="button" onclick="showMask()">遮罩层示例</a></p>
+        <div id="mask" class="mask"></div>
+        <div id="show" class="maskdialog">
+            <div class="diatitle"> </div>
+            <div class="diacontext"> </div>
+            <div class="diabutton">
+                <input id="btnok" type="button" value="Ok" onclick="hideMask();"/>
+                <input id="btnclose" type="button" value="Close" onclick="hideMask();"/>
+            </div>
+        </div>
     </div>
 
     <div class="row marketing">
@@ -53,7 +62,7 @@
         <p>&copy; 2016 Company, Inc.</p>
     </footer>
 </div>
-
+<script src="/example/jumbotron-narrow/mask.js"></script>
 <script src="/vendor/jquery/dist/jquery.js"></script>
 <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
