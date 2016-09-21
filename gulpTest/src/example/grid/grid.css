@@ -6,3 +6,8 @@
     background-color: rgba(86, 61, 124, .15);
     border: 1px solid rgba(86, 61, 124, .2);
 }
+/*fixed导航条要在body上留出空余*/
+body {
+    min-height: 2000px;
+    padding-top: 70px;
+}
